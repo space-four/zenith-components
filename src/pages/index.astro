@@ -1,13 +1,40 @@
 ---
 import StandardLayout from "../layouts/StandardLayout.astro";
+
+import Button from "../components/bootstrap/Button.astro";
 ---
 
 <StandardLayout metaTitle="Home" >
 
-	<div class="container py-5">
-		<div class="row">
-			<h1>Hallo Welt</h1>
+	<section class="py-5">
+		<div class="container py-5">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10 text-center">
+					<h1 class="display-4 fw-bolder">Zenith is a Bootstrap based Component Library for Astro SSG</h1>
+					<p class="lead fw-normal fs-3">Super amazing marketing lingo</p>
+				</div>
+				<div class="col-1"></div>
+			</div>
 		</div>
-	</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div>
+					<h2>Buttons</h2>
+					<h4>Button Style</h4>
+					<p>Add "primary" or "secondary" to attribute "style" to manipulate buttonstyle</p>
+					<Button style="primary" label="Primary Button">Bla</Button>
+					<Button style="secondary" label="Secondary Button"/>
+					<a href="https://www.google.de">
+						<Button label="Button with Link" />
+					</a>
+	
+				</div>
+			</div>
+		</div>
+	</section>
 
 </StandardLayout>

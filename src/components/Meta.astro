@@ -1,0 +1,32 @@
+---
+// Variables for Meta Infos get passed down through layouts to final pages components
+
+export interface Props {
+    metaTitle: string,
+    metaDescription: string
+}
+
+const { metaTitle, metaDescription } = Astro.props as Props;
+---
+
+<!-- Meta Description and Title are passed up from lower level components -->
+<title>Sitename | {metaTitle}</title>
+<meta name="description" content={metaDescription}>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="theme-color" content="#141414" />
+
+<!-- Facebook Meta Tags -->
+<meta property="og:title" content={`Your Website | ${metaTitle}`} />
+<meta property="og:url" content="https://your-website.de/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://your-website.de/path/to/image.webp">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="your-website.de">
+<meta property="twitter:url" content="https://your-website.de">
+<meta name="twitter:title" content={`Your Website | ${metaTitle}`} >
+<meta name="twitter:description" content={metaDescription} >
+<meta name="twitter:image" content="https://your-website.de/path/to/image.webp">

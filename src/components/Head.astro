@@ -1,0 +1,19 @@
+---
+import Meta from "./Meta.astro";
+
+import 'bootstrap/dist/css/bootstrap.css';
+
+export interface Props {
+    metaTitle: string,
+    metaDescription: string
+}
+
+const { metaTitle, metaDescription } = Astro.props as Props;
+
+---
+
+<head>
+    <Meta metaDescription={metaDescription} metaTitle={metaTitle} />
+
+
+</head>

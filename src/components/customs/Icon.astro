@@ -1,11 +1,18 @@
 ---
 export interface Props {
-    iconPack?: string,
-    iconName: string,
-    iconSize?: string
+    pack?: string,
+    name: string,
+    size?: string,
+    className?: string
 }
 
-const {iconPack="regular", iconName="code", iconSize="3x"} = Astro.props as Props;
+const {pack="regular", name="code", size="3x", className} = Astro.props as Props;
 ---
 
-<i class:list={[`fa-${iconPack}`, `fa-${iconName}`, `fa-${iconSize}x`]}></i>
+<i 
+    class:list={[
+        `fa-${pack}`,
+        `fa-${name}`,
+        `fa-${size}x`,
+        className]}
+></i>

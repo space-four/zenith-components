@@ -86,14 +86,14 @@ import Icon from "../components/customs/Icon.astro";
 					<p>Add an Icon to your button by wrapping your button component around an icon component. For this the button component has been given a 'slot /' tag.</p>
 					<Button>
 						Cart
-						<Icon iconPack="solid" iconName="cart-shopping" />
+						<Icon pack="solid" name="cart-shopping" />
 					</Button>
 					<Button>
-						<Icon iconPack="solid" iconName="cart-shopping" />
+						<Icon pack="solid" name="cart-shopping" />
 						Cart
 					</Button>
 					<Button>
-						<Icon iconPack="solid" iconName="cart-shopping" />
+						<Icon pack="solid" name="cart-shopping" />
 					</Button>
 				</div>
 			</div>
@@ -102,31 +102,44 @@ import Icon from "../components/customs/Icon.astro";
 
 	<section class="py-5">
 		<div class="container">
+
 			<div class="row">
 				<div>
 					<h3>Fontawesome Icon Component</h3>
+					<h5>Icon name</h5>
+					<p>Add the identifier from fontawesome.com to the attribute 'name' to display your wished icon</p>
+					<Icon className="me-3" pack="solid" name="plane-departure" size="5"/>
+					<Icon className="me-3" pack="solid" name="tower-observation" size="5"/>
+					<Icon className="me-3" pack="solid" name="umbrella-beach" size="5"/>
+					<Icon className="me-3" pack="solid" name="volleyball" size="5"/>
+					<Icon className="me-3" pack="solid" name="temperature-low" size="5"/>
+				</div>
+			</div>
+
+			<div class="row mt-5">
+				<div>
 					<h5>Sizing Icons</h5>
-					<p>Add Numbers from 1 to 10 for property iconSize to size your Icons</p>
-					<Icon iconPack="solid" iconName="microscope" iconSize="1"/>
-					<Icon iconPack="solid" iconName="microscope" iconSize="2"/>
-					<Icon iconPack="solid" iconName="microscope" iconSize="3"/>
-					<Icon iconPack="solid" iconName="microscope" iconSize="4"/>
-					<Icon iconPack="solid" iconName="microscope" iconSize="5"/>
-					<Icon iconPack="solid" iconName="microscope" iconSize="6"/>
-					<Icon iconPack="solid" iconName="microscope" iconSize="7"/>
-					<Icon iconPack="solid" iconName="microscope" iconSize="8"/>
-					<Icon iconPack="solid" iconName="microscope" iconSize="9"/>
-					<Icon iconPack="solid" iconName="microscope" iconSize="10"/>
+					<p>Add Numbers from 1 to 10 for property size to size your Icons</p>
+					<Icon pack="solid" name="microscope" size="1"/>
+					<Icon pack="solid" name="microscope" size="2"/>
+					<Icon pack="solid" name="microscope" size="3"/>
+					<Icon pack="solid" name="microscope" size="4"/>
+					<Icon pack="solid" name="microscope" size="5"/>
+					<Icon pack="solid" name="microscope" size="6"/>
+					<Icon pack="solid" name="microscope" size="7"/>
+					<Icon pack="solid" name="microscope" size="8"/>
+					<Icon pack="solid" name="microscope" size="9"/>
+					<Icon pack="solid" name="microscope" size="10"/>
 				</div>
 			</div>
 
 			<div class="row mt-5">
 				<div>
 					<h5>Setting Icon Style</h5>
-					<p>Choose from available free Fontawesome Icon packs regular, solid and brands</p>
-					<Icon iconName="comment" iconPack="solid" iconSize="5"/>
-					<Icon iconName="comment" iconPack="regular" iconSize="5"/>
-					<Icon iconName="brands" iconPack="instagram" iconSize="5"/>
+					<p>Choose from available free Fontawesome Icon packs regular, solid and brands for the attribute 'pack'</p>
+					<Icon name="comment" pack="solid" size="5"/>
+					<Icon name="comment" pack="regular" size="5"/>
+					<Icon name="brands" pack="instagram" size="5"/>
 				</div>
 			</div>
 		</div>

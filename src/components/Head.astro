@@ -1,8 +1,14 @@
 ---
 import Meta from "./Meta.astro";
 
+// Import Bootstrap from Node Modules
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-icons/bootstrap-icons.svg';
+
+// Import Fontawesome Icons from Node Modules
+import '@fortawesome/fontawesome-free/css/fontawesome.css'
+import '@fortawesome/fontawesome-free/css/solid.css'
+import '@fortawesome/fontawesome-free/css/regular.css'
+import '@fortawesome/fontawesome-free/css/brands.css'
 
 export interface Props {
     metaTitle: string,
@@ -14,5 +20,6 @@ const { metaTitle, metaDescription } = Astro.props as Props;
 ---
 
 <head>
+
     <Meta metaDescription={metaDescription} metaTitle={metaTitle} />
 </head>

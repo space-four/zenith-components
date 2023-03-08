@@ -1,0 +1,11 @@
+---
+export interface Props {
+    iconPack?: string,
+    iconName: string,
+    iconSize?: string
+}
+
+const {iconPack="regular", iconName="code", iconSize="3x"} = Astro.props as Props;
+---
+
+<i class:list={[`fa-${iconPack}`, `fa-${iconName}`, `fa-${iconSize}x`]}></i>

@@ -2,6 +2,7 @@
 import StandardLayout from "../layouts/StandardLayout.astro";
 
 import Button from "../components/bootstrap/Button.astro";
+import Icon from "../components/customs/Icon.astro";
 ---
 
 <StandardLayout metaTitle="Home" >
@@ -19,22 +20,119 @@ import Button from "../components/bootstrap/Button.astro";
 		</div>
 	</section>
 
-	<section>
+	<section class="py-5">
 		<div class="container">
 			<div class="row">
-				<div>
-					<h2>Buttons</h2>
-					<h4>Button Style</h4>
-					<p>Add "primary" or "secondary" to attribute "style" to manipulate buttonstyle</p>
-					<Button style="primary" label="Primary Button">Bla</Button>
-					<Button style="secondary" label="Secondary Button"/>
-					<a href="https://www.google.de">
-						<Button label="Button with Link" />
-					</a>
-	
+				<div class="col">
+					<h2>Dependencies</h2>
+					<ul>
+						<li>Bootstrap</li>
+						<li>Fontawesome (free)</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h2 class="display-5 fw-normal pb-5">Bootstrap Components built for Astro</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-5">
+		<div class="container">
+			<div class="row">
+				<div>
+					<h3>Buttons</h3>
+					<h5>Button Style</h5>
+					<p>Add "primary" or "secondary" to attribute "style" to manipulate buttonstyle. Other button styles from bootstrap are of course possible as well.</p>
+					<Button style="primary" label="Primary Button" />
+					<Button style="secondary" label="Secondary Button"/>
+					<Button style="success" label="Success Button"/>
+					<Button style="danger" label="Danger Button"/>
+					<Button style="info" label="Info Button"/>
+				</div>
+			</div>
+
+			<div class="row mt-3">
+				<div class="col">
+					<h5>Buttons with Link</h5>
+					<p>Wrap your Button Component in anchor-tag to create a button with a link</p>
+					<a href="https://www.google.de">
+						<Button label="Button with Link" />
+					</a>
+				</div>
+			</div>
+
+
+			<div class="row mt-3">
+				<div class="col">
+					<h5>Button Sizing</h5>
+					<p>Choose from 'sm' or 'lg' for attribute 'size' to up- or downscale your button. Leave 'size' empty to render a regular button.</p>
+					<Button size="sm">Small Button</Button>
+					<Button >Regular Button</Button>
+					<Button size="lg">Large Button</Button>
+				</div>
+			</div>
+
+			<div class="row mt-3">
+				<div class="col">
+					<h5>Buttons with Icons</h5>
+					<p>Add an Icon to your button by wrapping your button component around an icon component. For this the button component has been given a 'slot /' tag.</p>
+					<Button>
+						Cart
+						<Icon iconPack="solid" iconName="cart-shopping" />
+					</Button>
+					<Button>
+						<Icon iconPack="solid" iconName="cart-shopping" />
+						Cart
+					</Button>
+					<Button>
+						<Icon iconPack="solid" iconName="cart-shopping" />
+					</Button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-5">
+		<div class="container">
+			<div class="row">
+				<div>
+					<h3>Fontawesome Icon Component</h3>
+					<h5>Sizing Icons</h5>
+					<p>Add Numbers from 1 to 10 for property iconSize to size your Icons</p>
+					<Icon iconPack="solid" iconName="microscope" iconSize="1"/>
+					<Icon iconPack="solid" iconName="microscope" iconSize="2"/>
+					<Icon iconPack="solid" iconName="microscope" iconSize="3"/>
+					<Icon iconPack="solid" iconName="microscope" iconSize="4"/>
+					<Icon iconPack="solid" iconName="microscope" iconSize="5"/>
+					<Icon iconPack="solid" iconName="microscope" iconSize="6"/>
+					<Icon iconPack="solid" iconName="microscope" iconSize="7"/>
+					<Icon iconPack="solid" iconName="microscope" iconSize="8"/>
+					<Icon iconPack="solid" iconName="microscope" iconSize="9"/>
+					<Icon iconPack="solid" iconName="microscope" iconSize="10"/>
+				</div>
+			</div>
+
+			<div class="row mt-5">
+				<div>
+					<h5>Setting Icon Style</h5>
+					<p>Choose from available free Fontawesome Icon packs regular, solid and brands</p>
+					<Icon iconName="comment" iconPack="solid" iconSize="5"/>
+					<Icon iconName="comment" iconPack="regular" iconSize="5"/>
+					<Icon iconName="brands" iconPack="instagram" iconSize="5"/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<div class="py-5"></div>
 </StandardLayout>

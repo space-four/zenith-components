@@ -6,9 +6,8 @@ export interface Props {
     className?: string
 }
 
-const {label="Button", style="primary", className, size} = Astro.props as Props;
+const {label, style="primary", className, size} = Astro.props as Props;
 ---
-
 
 <button 
     class:list={[
@@ -18,5 +17,6 @@ const {label="Button", style="primary", className, size} = Astro.props as Props;
            `${className}`]}
     type="button"
 >
+    <slot />
     {label}
 </button>

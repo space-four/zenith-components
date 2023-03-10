@@ -1,6 +1,6 @@
 ---
 export interface Props {
-    pack?: string,
+    pack: string,
     name: string,
     size?: string,
     className?: string
@@ -14,5 +14,6 @@ const {pack="regular", name="code", size="3x", className} = Astro.props as Props
         `fa-${pack}`,
         `fa-${name}`,
         `fa-${size}x`,
-        className]}
+        className
+    ]}
 ></i>

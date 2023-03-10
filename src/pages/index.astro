@@ -181,8 +181,18 @@ import Icon from "../components/customs/Icon.astro";
 
 			<div class="row mt-5 mb-4">
 				<div>
-					<h5>Combine Badges with a button component</h5>
-						<Button>Cart <Badge label="4" style="warning" /></Button>
+					<h5>Combine Badges with a button component and even with an Icon Component</h5>
+					<Button>
+						Cart 
+						<Badge label="4" style="warning" />
+					</Button>
+					<Button>
+						<Badge label="4" style="warning" />
+					</Button>
+					<Button>
+						<Icon pack="solid" name="cart-shopping" className="me-2" />
+						<Badge label="4" style="warning" />
+					</Button>
 				</div>
 			</div>
 

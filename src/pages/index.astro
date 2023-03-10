@@ -65,7 +65,7 @@ import Icon from "../components/customs/Icon.astro";
 				<div class="col">
 					<h5>Buttons with Link</h5>
 					<p>Wrap your Button Component in anchor-tag to create a button with a link</p>
-					<a href="https://www.google.de">
+					<a href="https://astro.build/">
 						<Button label="Button with Link" />
 					</a>
 				</div>
@@ -97,6 +97,10 @@ import Icon from "../components/customs/Icon.astro";
 					<Button>
 						<Icon pack="solid" name="cart-shopping" />
 					</Button>
+					<Button>
+						<span class="text-warning me-2"><Icon pack="solid" name="triangle-exclamation" /></span>
+						Button with a warning!
+					</Button>
 				</div>
 			</div>
 		</div>
@@ -108,8 +112,12 @@ import Icon from "../components/customs/Icon.astro";
 			<div class="row">
 				<div>
 					<h3>Fontawesome Icon Component</h3>
+					<div class="mt-3 mb-5">
+						<p class="mb-2">This Iconset/Component depends on fontawesome. You can use any fontawesome-icon from the free set</p>
+						<a href="https://fontawesome.com/search?o=r&m=free">https://fontawesome.com/search?o=r&m=free</a>
+					</div>
 					<h5>Icon name</h5>
-					<p>Add the identifier from fontawesome.com to the attribute 'name' to display your wished icon</p>
+					<p>Add the identifier from fontawesome.com without the leading 'fa-' to the attribute 'name' of the component to display your wished icon</p>
 					<Icon className="me-3" pack="solid" name="plane-departure" size="5"/>
 					<Icon className="me-3" pack="solid" name="tower-observation" size="5"/>
 					<Icon className="me-3" pack="solid" name="umbrella-beach" size="5"/>
@@ -181,7 +189,8 @@ import Icon from "../components/customs/Icon.astro";
 
 			<div class="row mt-5 mb-4">
 				<div>
-					<h5>Combine Badges with a button component and even with an Icon Component</h5>
+					<h5>Combining Badges</h5>
+					<p>Combine Badges with a button component and even with an Icon Component</p>
 					<Button>
 						Cart 
 						<Badge label="4" style="warning" />
@@ -198,7 +207,8 @@ import Icon from "../components/customs/Icon.astro";
 
 			<div class="row mt-5 mb-4">
 				<div>
-					<h5>Add the option 'rounded-pill' to increase border radius of badge</h5>
+					<h5>Rounded Badges</h5>
+					<p>Add the option 'rounded-pill' to increase border radius of badge</p>
 						<Badge roundedPill label="Rounded Badge" style="primary" />
 				</div>
 			</div>

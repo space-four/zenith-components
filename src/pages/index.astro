@@ -2,6 +2,8 @@
 import StandardLayout from "../layouts/StandardLayout.astro";
 
 import Button from "../components/bootstrap/Button.astro";
+import Badge from "../components/bootstrap/Badge.astro";
+
 import Icon from "../components/customs/Icon.astro";
 ---
 
@@ -140,6 +142,54 @@ import Icon from "../components/customs/Icon.astro";
 					<Icon className="me-3" name="comment" pack="solid" size="5"/>
 					<Icon className="me-3" name="comment" pack="regular" size="5"/>
 					<Icon className="me-3" name="brands" pack="instagram" size="5"/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-5">
+		<div class="container">
+
+			<div class="row">
+				<div>
+					<h3>Badges</h3>
+					<h5>Badge label</h5>
+					<p>Badges scale to match the Size of the parent element. Add your Label to the property 'label'.</p>
+					<h1>H1 Example Heading <Badge label="New" /></h1>
+					<h2>H2 Example Heading <Badge label="New" /></h2>
+					<h3>H3 Example Heading <Badge label="New" /></h3>
+					<h4>H4 Example Heading <Badge label="New" /></h4>
+					<h5>H5 Example Heading <Badge label="New" /></h5>
+					<h6>H6 Example Heading <Badge label="New" /></h6>
+				</div>
+			</div>
+
+			<div class="row mt-5 mb-4">
+				<div>
+					<h5>Style Badges according to your needs with property 'style'</h5>
+					<p>Badges scale to match the Size of the parent element. Add your Label to the property 'label'.</p>
+					<Badge label="Primary" style="primary" />
+					<Badge label="Secondary" style="secondary" />
+					<Badge label="Success" style="success" />
+					<Badge label="Danger" style="danger" />
+					<Badge label="Warning" style="warning" />
+					<Badge label="Info" style="info" />
+					<Badge label="Light" style="Light" />
+					<Badge label="Dark" style="dark" />
+				</div>
+			</div>
+
+			<div class="row mt-5 mb-4">
+				<div>
+					<h5>Combine Badges with a button component</h5>
+						<Button>Cart <Badge label="4" style="warning" /></Button>
+				</div>
+			</div>
+
+			<div class="row mt-5 mb-4">
+				<div>
+					<h5>Add the option 'rounded-pill' to increase border radius of badge</h5>
+						<Badge roundedPill label="Rounded Badge" style="primary" />
 				</div>
 			</div>
 		</div>

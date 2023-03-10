@@ -1,0 +1,18 @@
+---
+export interface props {
+    label?: string,
+    style?: string,
+    roundedPill?: boolean
+}
+
+const { label, style="primary", roundedPill } = Astro.props as props
+
+---
+
+<span class:list={[
+    `badge`, 
+    `text-bg-${style}`,
+    `${roundedPill ? `rounded-pill` : ``}`
+]}>
+    {label}
+</span>
